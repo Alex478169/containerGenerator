@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  webapp:
+    container_name: jjio
+    image: nginx
+    ports:
+    - 8080:80
+    volumes:
+    - .:/App
+    environment:
+    - DEBUG=true
+    restart: unless-stopped
